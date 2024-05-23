@@ -27,5 +27,8 @@
 <!-- Had to fix another error; The error "Uncaught TypeError: Failed to resolve module specifier 'axios'. Relative references must start with either '/', './', or '../'." indicates that the browser is unable to resolve the module specifier for Axios. I read this typically occurs when the browser encounters an import statement for a module that it cannot resolve. To resolve this issue, I added Axios directly in the HTML file using a script tag below. -->
      <!-- Include Axios library directly -->
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</body>
+<!-- New Error: Failed to reolve module specifier 'axios'. Fixed by using a CDN.-->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+<!-- Above script still didn't work, so added defer attribute to the script tag to ensure that the script is executed after the HTML content is parsed. -->
+    </body>
 </html>
