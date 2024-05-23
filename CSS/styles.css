@@ -1,0 +1,43 @@
+/* CSS styles for the recipe finder web application */
+
+/* Reset default browser styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Header styles */
+header {
+    background-color: #fd0808;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Search form styles */
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 300px;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: goldenrod;
+    color: #6d3d05;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: yellow;
+}
+
+/* Recipe container styles */
+#recipe-container {
+    padding: 20px;
+}
