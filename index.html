@@ -24,5 +24,8 @@
     <!-- JavaScript file -->
     <!-- Importing app.js as an ES6 module AND I had to add module as the type attribute in the script tag. I had an error because this attribute was missing. This attribute is necessary for the browser to recognize the JavaScript file as an ES6 module and properly handle the import statements. -->
     <script src="JS/app.js" type="module"></script>
+<!-- Had to fix another error; The error "Uncaught TypeError: Failed to resolve module specifier 'axios'. Relative references must start with either '/', './', or '../'." indicates that the browser is unable to resolve the module specifier for Axios. I read this typically occurs when the browser encounters an import statement for a module that it cannot resolve. To resolve this issue, I added Axios directly in the HTML file using a script tag below. -->
+     <!-- Include Axios library directly -->
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
