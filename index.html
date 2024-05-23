@@ -1,16 +1,26 @@
-<!-- index.html -->
+<!-- index.html file -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Finder App</title>
+    <title>Recipe Finder</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Recipe search results will be displayed here -->
-    </div>
+    <!-- Header with search form -->
+    <header>
+        <div class="container">
+            <h1>Recipe Finder</h1>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search for recipes...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+    <!-- Main section to display recipe results -->
+    <main id="recipe-container"></main>
+    <!-- JavaScript file -->
     <script src="app.js"></script>
 </body>
 </html>
