@@ -1,7 +1,14 @@
 // Import Axios library for making HTTP requests
-const axios = require('axios');
+// const axios = require('axios'); COMMENTED this line of code because it caused the browser to throw an error. The error "Uncaught ReferenceError: require is not defined" indicates that the require function, which is commonly used in Node.js environments for importing modules, is not recognized in the browser environment. This is because the browser does not support the CommonJS module system used by Node.js out of the box. To fix this issue, I had to modify the JavaScript code to ensure compatibility with the browser environment. Instead of using require to import modules, I had to use other methods such as script tags to include external scripts or use ES6 modules.
 // Import dotenv library for loading environment variables from .env file
-require('dotenv').config();
+//require('dotenv').config();
+
+
+//ADDED
+// Import Axios library for making HTTP requests
+import axios from 'axios';
+// Import dotenv library for loading environment variables from .env file
+import 'dotenv/config';
 
 // Define variables
 const searchForm = document.getElementById('search-form');
