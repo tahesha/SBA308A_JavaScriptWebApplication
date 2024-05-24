@@ -1,19 +1,20 @@
 // Import Axios library for making HTTP requests
 // const axios = require('axios'); COMMENTED this line of code because it caused the browser to throw an error. The error "Uncaught ReferenceError: require is not defined" indicates that the require function, which is commonly used in Node.js environments for importing modules, is not recognized in the browser environment. This is because the browser does not support the CommonJS module system used by Node.js out of the box. To fix this issue, I had to modify the JavaScript code to ensure compatibility with the browser environment. Instead of using require to import modules, I had to use other methods such as script tags to include external scripts or use ES6 modules.
 // Import dotenv library for loading environment variables from .env file
-//require('dotenv').config();
+// require('dotenv').config();
 
 
 //ADDED
 // Import Axios library for making HTTP requests
 import axios from 'axios';
 // Import dotenv library for loading environment variables from .env file
-import 'dotenv/config';
+//import 'dotenv/config'; //COMMENTED this line of code because it was causing an error "Uncaught SyntaxError: Cannot use import statement outside a module". To fix this error, I had to handle environment variables differently.
 
 // Define variables
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const recipeContainer = document.getElementById('recipe-container');
+
 
 // Define event listener for form submission
 searchForm.addEventListener('submit', async function(event) {
@@ -66,4 +67,5 @@ function displayRecipes(recipes) {
 console.log('Script loaded successfully');
 
 // Log the API key from environment variables
-console.log('API_KEY:', process.env.API_KEY);
+// console.log('API_KEY:', process.env.API_KEY); COMMENTED this line of code because it was causing an error "Uncaught ReferenceError: process is not defined". To fix this error, I had to include the API key directly in the JavaScript code.
+console.log('API_KEY:', 'YOUR_API_KEY'); // Replace 'YOUR_API_KEY' with your actual API key
